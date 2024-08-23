@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+  
+div.responsive-image {
+    width: 312.5px;
+    height: 312.5px;
+    background-image: url('homer.jpg');
+    background-size: 625px 625px;
+    background-repeat: no-repeat;
+}
+
+/* Media queries for different screen widths */
+@media (max-width: 600px) {
+    div.responsive-image {
+        background-position: 0 0; /* Top-left part */
+    }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+    div.responsive-image {
+        background-position: 100% 0; /* Top-right part */
+    }
+}
+@media (min-width: 801px) and (max-width: 1000px) {
+    div.responsive-image {
+        background-position: 0 100%; /* Bottom-left part */
+    }
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+    div.responsive-image {
+        background-position: 100% 100%; /* Bottom-right part */
+    }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+    div.responsive-image {
+        background-position: 0 100%; /* Bottom-left part */
+    }
+}
+@media (min-width: 1401px) and (max-width: 1600px) {
+    div.responsive-image {
+        background-position: 100% 0; /* Top-right part */
+    }
+}
+@media (min-width: 1601px) {
+    div.responsive-image {
+        background-position: 0 0; /* Top-left part */
+    }
+}
+
